@@ -31,9 +31,5 @@ public class TipoPokemon {
 	public void setNombre(String nombre) {
 		this.nombre = nombre;
 	}
-	
-	//public double getEfectividad(TipoPokemon tipoPok) {
-		
-	//}
 
 }
