@@ -171,4 +171,5 @@ public class Pokemon {
 		this.level = level;
 	}
 
+	
 }
