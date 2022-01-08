@@ -36,6 +36,8 @@ public class Main {
 
 		// Movimientos que se pueden hacer
 		Movimiento pla = new Movimiento("Placaje", nor, 35, 0, 0, 0, 0, 0, nin, 40);
+		Movimiento disDem = new Movimiento("Disparo demora", bic, 40, 0, 0, 0, 0, -1, nin, 0);
+		Movimiento picVen = new Movimiento("Picotazo venenoso", ven, 35, 0, 0, 0, 0, 0, env, 15);
 
 		// Pokemons que se pueden tener
 		Pokemon cat = new Pokemon(10, "Caterpie", bic, nulo, 30, 35, 20, 20, 45, null, 45, 1);
