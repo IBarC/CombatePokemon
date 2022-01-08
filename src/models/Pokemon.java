@@ -1,9 +1,11 @@
 package models;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 public class Pokemon {
 
+	Scanner sc = new Scanner(System.in);
 	public int numero;
 	public String nombre;
 	public TipoPokemon tipo1;
@@ -171,5 +173,30 @@ public class Pokemon {
 		this.level = level;
 	}
 
-	
+	public Movimiento elegirMovimiento() {
+		
+		int i = 0;
+		do {
+			try {
+				System.out.println("¿Qué quieres que haga " + this.nombre + "?:");
+				mostrarMovimentos();
+				i = Integer.parseInt(sc.nextLine());
+			} catch (Exception e) {
+				System.out.println("Elige un movimiento de la lista.");
+			}
+			
+		} while (i > 0 && i < movimientos.size());
+		
+		Movimiento m = this.movimientos.get(i);
+
+		return m;
+	}
+
+	public void mostrarMovimentos() {
+		int i = 1;
+		for (Movimiento m : this.movimientos) {
+			System.out.println(i + ". " + m.nombre + "\n");
+			i++;
+		}
+	}
 }
