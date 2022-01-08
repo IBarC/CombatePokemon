@@ -16,38 +16,18 @@ public class Pokemon {
 	public int specialAttack;
 	public int specialDefense;
 	public int speed;
-	ArrayList<Movimiento> movimientos = new ArrayList<Movimiento>();
+	public ArrayList<Movimiento> movimientos = new ArrayList<Movimiento>();
 	public int maxHP;
 	public int actualHP;
 	public int level;
 
-	/**
-	 * Constructor de la clase Pokemon
-	 * 
-	 * @param numero
-	 * @param nombre
-	 * @param tipo1
-	 * @param tipo2
-	 * @param estado
-	 * @param attack
-	 * @param defense
-	 * @param specialAttack
-	 * @param specialDefense
-	 * @param speed
-	 * @param movimientos
-	 * @param maxHP
-	 * @param actualHP
-	 * @param level
-	 */
-	Pokemon(int numero, String nombre, TipoPokemon tipo1, TipoPokemon tipo2, Estado estado, int attack, int defense,
-			int specialAttack, int specialDefense, int speed, ArrayList<Movimiento> movimientos, int maxHP,
-			int actualHP, int level) {
+	public Pokemon(int numero, String nombre, TipoPokemon tipo1, TipoPokemon tipo2, int attack, int defense,
+			int specialAttack, int specialDefense, int speed, ArrayList<Movimiento> movimientos, int maxHP, int level) {
 		super();
 		this.numero = numero;
 		this.nombre = nombre;
 		this.tipo1 = tipo1;
 		this.tipo2 = tipo2;
-		this.estado = estado;
 		this.attack = attack;
 		this.defense = defense;
 		this.specialAttack = specialAttack;
@@ -55,7 +35,6 @@ public class Pokemon {
 		this.speed = speed;
 		this.movimientos = movimientos;
 		this.maxHP = maxHP;
-		this.actualHP = actualHP;
 		this.level = level;
 	}
 

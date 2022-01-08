@@ -4,7 +4,7 @@ import java.util.ArrayList;
 
 public class Equipo {
 
-	ArrayList<Pokemon> equipo = new ArrayList<Pokemon>();
+	public ArrayList<Pokemon> equipo = new ArrayList<Pokemon>();
 
 	/**
 	 * Constructor de la clase equipo

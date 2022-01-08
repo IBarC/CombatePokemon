@@ -13,21 +13,21 @@ public class Movimiento {
 	public int cambiaSpDef;
 	public int cambiaSpeed;
 	public Estado aplicaEstado;
+	public int power;
 
-	public Movimiento(String nombre, TipoPokemon tipo, int maxPP, int actualPP, int damage, int cambiaAttack,
-			int cambiaDef, int cambiaSpAttack, int cambiaSpDef, int cambiaSpeed, Estado aplicaEstado) {
+	public Movimiento(String nombre, TipoPokemon tipo, int maxPP,int cambiaAttack,
+			int cambiaDef, int cambiaSpAttack, int cambiaSpDef, int cambiaSpeed, Estado aplicaEstado, int power) {
 		super();
 		this.nombre = nombre;
 		this.tipo = tipo;
 		this.maxPP = maxPP;
-		this.actualPP = actualPP;
-		this.damage = damage;
 		this.cambiaAttack = cambiaAttack;
 		this.cambiaDef = cambiaDef;
 		this.cambiaSpAttack = cambiaSpAttack;
 		this.cambiaSpDef = cambiaSpDef;
 		this.cambiaSpeed = cambiaSpeed;
 		this.aplicaEstado = aplicaEstado;
+		this.power = power;
 	}
 
 	// Getters y setters
@@ -98,6 +98,10 @@ public class Movimiento {
 
 	public void setCambiaSpeed(int cambiaSpeed) {
 		this.cambiaSpeed = cambiaSpeed;
+	}
+
+	public int getPower() {
+		return power;
 	}
 
 	/**
