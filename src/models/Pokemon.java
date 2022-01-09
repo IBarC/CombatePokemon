@@ -1,6 +1,7 @@
 package models;
 
 import java.util.ArrayList;
+
 import java.util.Scanner;
 
 public class Pokemon {
@@ -22,7 +23,7 @@ public class Pokemon {
 	public int level;
 
 	public Pokemon(int numero, String nombre, TipoPokemon tipo1, TipoPokemon tipo2, int attack, int defense,
-			int specialAttack, int specialDefense, int speed, ArrayList<Movimiento> movimientos, int maxHP, int level) {
+			int specialAttack, int specialDefense, int speed, int maxHP, int level, Estado estado) {
 		super();
 		this.numero = numero;
 		this.nombre = nombre;
@@ -33,9 +34,10 @@ public class Pokemon {
 		this.specialAttack = specialAttack;
 		this.specialDefense = specialDefense;
 		this.speed = speed;
-		this.movimientos = movimientos;
 		this.maxHP = maxHP;
 		this.level = level;
+		this.actualHP = maxHP;
+		this.estado = estado;
 	}
 
 	// Getters y setters
@@ -154,17 +156,18 @@ public class Pokemon {
 
 	public Movimiento elegirMovimiento() {
 		
-		int i = 0;
-		do {
-			try {
+		int i = 1;
+		//do {
+			//try {
 				System.out.println("¿Qué quieres que haga " + this.nombre + "?:");
 				mostrarMovimentos();
 				i = Integer.parseInt(sc.nextLine());
-			} catch (Exception e) {
-				System.out.println("Elige un movimiento de la lista.");
-			}
+				i--;
+			//} catch (Exception e) {
+			//	System.out.println("Elige un movimiento de la lista.");
+			//}
 			
-		} while (i > 0 && i < movimientos.size());
+		//} while (i > 0 && i < movimientos.size());
 		
 		Movimiento m = this.movimientos.get(i);
 

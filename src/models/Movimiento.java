@@ -28,6 +28,7 @@ public class Movimiento {
 		this.cambiaSpeed = cambiaSpeed;
 		this.aplicaEstado = aplicaEstado;
 		this.power = power;
+		this.actualPP = this.maxPP;
 	}
 
 	// Getters y setters

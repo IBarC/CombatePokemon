@@ -11,9 +11,8 @@ public class Equipo {
 	 * 
 	 * @param equipo
 	 */
-	public Equipo(ArrayList<Pokemon> equipo) {
+	public Equipo() {
 		super();
-		this.equipo = equipo;
 	}
 
 	/**
