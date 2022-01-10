@@ -100,8 +100,31 @@ public class Main {
 		int contPokE2 = 0;
 
 		while (!c.isFinished()) {
+			boolean pok1V = true;
+			boolean pok2V = true;
+			if (contPokE1 < e1.equipo.equipo.size() && e1.equipo.equipo.get(contPokE1).actualHP <= 0) {
+				System.out.println(e1.equipo.equipo.get(contPokE1).nombre + " se ha debilitado");
+				contPokE1++;
+				System.out.println("Ahora luchará " + e1.equipo.equipo.get(contPokE1).nombre);
+				pok1V = false;
+			}
+			if (contPokE1 == e1.equipo.equipo.size() - 1 && e1.equipo.equipo.get(contPokE1).actualHP <= 0) {
+				System.out.println(e1.equipo.equipo.get(contPokE1).nombre + " se ha debilitado");
+				System.out.println("El combate ha terminado");
+			}
+
+			if (contPokE2 < e2.equipo.equipo.size() && e2.equipo.equipo.get(contPokE2).actualHP <= 0) {
+				System.out.println(e2.equipo.equipo.get(contPokE2).nombre + " se ha debilitado");
+				contPokE2++;
+				System.out.println("Ahora luchará " + e2.equipo.equipo.get(contPokE2).nombre);
+				pok2V = false;
+			}
+			if (contPokE2 == e2.equipo.equipo.size() - 1 && e2.equipo.equipo.get(contPokE2).actualHP <= 0) {
+				System.out.println(e1.equipo.equipo.get(contPokE1).nombre + " se ha debilitado");
+				System.out.println("El combate ha terminado");
+			}
 			c.quienEmpiezaTurno(contPokE1, contPokE2);
-			c.aplicarMovimiento(contTurnos, contEnv, contDormido, contCong, contPokE1, contPokE2);
+			c.aplicarMovimiento(contTurnos, contEnv, contDormido, contCong, contPokE1, contPokE2, pok1V, pok2V);
 			c.pokemon1 = e1.equipo.equipo.get(contPokE1);
 			c.pokemon2 = e2.equipo.equipo.get(contPokE2);
 
